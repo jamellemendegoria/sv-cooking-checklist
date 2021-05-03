@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sv-cooking-checklist/static/css/main.2a113d9c.chunk.css",
+    "main.js": "/sv-cooking-checklist/static/js/main.e54ac38a.chunk.js",
+    "main.js.map": "/sv-cooking-checklist/static/js/main.e54ac38a.chunk.js.map",
+    "runtime-main.js": "/sv-cooking-checklist/static/js/runtime-main.619b7ecf.js",
+    "runtime-main.js.map": "/sv-cooking-checklist/static/js/runtime-main.619b7ecf.js.map",
+    "static/js/2.00c255a0.chunk.js": "/sv-cooking-checklist/static/js/2.00c255a0.chunk.js",
+    "static/js/2.00c255a0.chunk.js.map": "/sv-cooking-checklist/static/js/2.00c255a0.chunk.js.map",
+    "static/js/3.ace7e0f4.chunk.js": "/sv-cooking-checklist/static/js/3.ace7e0f4.chunk.js",
+    "static/js/3.ace7e0f4.chunk.js.map": "/sv-cooking-checklist/static/js/3.ace7e0f4.chunk.js.map",
+    "index.html": "/sv-cooking-checklist/index.html",
+    "static/css/main.2a113d9c.chunk.css.map": "/sv-cooking-checklist/static/css/main.2a113d9c.chunk.css.map",
+    "static/js/2.00c255a0.chunk.js.LICENSE.txt": "/sv-cooking-checklist/static/js/2.00c255a0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.619b7ecf.js",
+    "static/js/2.00c255a0.chunk.js",
+    "static/css/main.2a113d9c.chunk.css",
+    "static/js/main.e54ac38a.chunk.js"
+  ]
+}
