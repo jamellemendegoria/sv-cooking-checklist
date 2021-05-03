@@ -1,0 +1,186 @@
+/* || GENERAL STYLES */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffcc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #0066cc;
+  font: 36px 'Nunito', sans-serif;
+  text-align: center;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  background-color: #e55b2d;
+  box-shadow: 0 8px #b24723;
+}
+button:active {
+  background-color: #b24723;
+  box-shadow: 0 5px #7f3319;
+  transform: translateY(4px);
+}
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.custom-input {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+.custom-input:hover {
+  border-color: #aaa;
+}
+/* || SEARCH BAR */
+.search-bar {
+  height: 35px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: #333333;
+  font: 18px 'Open Sans', sans-serif;
+}
+/* || FILTER BTNS */
+.filter-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.filter-btn {
+  margin-left: 10px;
+  font-size: 18px;
+  padding: 5px 15px;
+  box-shadow: 0 8px #b24723;
+}
+.filter-btn[aria-pressed='true'] {
+  background-color: #b24723;
+  box-shadow: 0 5px #7f3319;
+  transform: translateY(4px);
+}
+/* || EXPAND/COLLAPSE BTN */
+.expand-collapse-btn {
+  margin-bottom: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  box-shadow: 0 6px #b24723;
+}
+.expand-collapse-btn:active {
+  box-shadow: 0 4px #7f3319;
+}
+/* || RECIPES */
+.recipe-list {
+  flex-direction: column;
+}
+.recipe {
+  display: flex;
+  padding: 5px 0;
+  border-bottom: 1px dashed #ccc;
+  cursor: pointer;
+}
+.recipe:hover {
+  border-color: #aaa;
+}
+.recipe-no-checkbox {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10px;
+}
+.recipe-img-and-label {
+  display: flex;
+  align-items: center;
+}
+.recipe-label {
+  margin-left: 10px;
+  color: #e55b2d;
+  font: 24px 'Nunito', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+/* Hides browser's default checkbox */
+input[type='checkbox'] {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+.custom-checkbox {
+  height: 35px;
+  width: 35px;
+  background-color: #fff;
+  cursor: pointer;
+}
+input[type='checkbox']:checked ~ .custom-checkbox {
+  background-color: #0066cc;
+  border: none;
+}
+.custom-checkbox::after {
+  padding-top: 3px;
+  content: '✓';
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  display: none;
+}
+input[type='checkbox']:checked ~ .custom-checkbox::after {
+  display: block;
+}
+.recipe-info-container {
+  flex-direction: column;
+}
+.recipe-info-list {
+  flex-direction: column;
+}
+.recipe-info-item {
+  color: #333333;
+  font: 18px 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.recipe-info-label {
+  margin-right: 5px;
+  color: #b24723;
+  font: 18px 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+/* || UTILITIES */
+.first {
+  margin-left: 0;
+}
+/* || MEDIA QUERIES */
+@media screen and (min-width: 600px) {
+  body {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 865px) {
+  body {
+    width: 50%;
+  }
+  .recipe-info-list {
+    flex-direction: row;
+  }
+  .recipe-info-item {
+    margin-left: 5px;
+  }
+  .recipe-info-label {
+    margin-right: 0;
+  }
+}
