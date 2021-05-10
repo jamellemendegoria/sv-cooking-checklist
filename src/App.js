@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import SearchBar from './components/SearchBar';
 import FilterBtn from './components/FilterBtn';
 import ExpandCollapseBtn from './components/ExpandCollapseBtn';
 import Recipe from './components/Recipe';
+import SettingsBtn from './components/SettingsBtn';
+import Modal from './components/Modal';
 
 import RecipeData from './assets/recipes.json';
 
@@ -14,18 +16,25 @@ const FILTER_MAP = {
 };
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-// Adds isCompleted property to recipe data
-let recipeDataWCompleted = RecipeData;
-recipeDataWCompleted.forEach(recipe => {
+// Adds isCompleted and isDisplayingInfo properties to recipe data
+let recipeDataWProps = RecipeData;
+recipeDataWProps.forEach(recipe => {
   recipe["isCompleted"] = false;
   recipe["isDisplayingInfo"] = false;
 });
 
 function App() {
-  const [recipes, setRecipes] = useState(recipeDataWCompleted);
+  const [recipes, setRecipes] = useState(
+    JSON.parse(localStorage.getItem('recipes')) || recipeDataWProps
+  );
   const [filterText, setFilterText] = useState('');
   const [filterBtn, setFilterBtn] = useState('All');
   const [isExpanded, setExpanded] = useState(false);
+  const [isShowingModal, setShowingModal] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('recipes', JSON.stringify(recipes));
+  }, [recipes]);
 
   const filterBtnCounts = {
     All: recipes.length,
@@ -115,9 +124,25 @@ function App() {
     });
     setRecipes(editedRecipes);
   }
+  function handleShowModalToggle() {
+    setShowingModal(!isShowingModal);
+  }
+  function uncheckAllRecipes() {
+    const editedRecipes = recipes.map(recipe => {
+        return {...recipe, isCompleted: false}
+    });
+    setRecipes(editedRecipes);
+  }
 
   return (
     <div>
+      <div className="settings-btn-container">
+        <SettingsBtn onShowModalToggle={handleShowModalToggle} />
+      </div>
+      <Modal
+        isShowing={isShowingModal}
+        onShowModalToggle={handleShowModalToggle} 
+        uncheckAllRecipes={uncheckAllRecipes} />
       <h1>Stardew Valley Cooking Checklist</h1>
       <SearchBar
         filterText={filterText}

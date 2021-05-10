@@ -29,7 +29,7 @@ function Recipe(props) {
         className="checkbox-container">
         <input
           type="checkbox"
-          defaultChecked={props.isCompleted}
+          checked={props.isCompleted}
           onChange={handleChange}
           id={props.id} />
         <div className="custom-checkbox custom-input"></div>
