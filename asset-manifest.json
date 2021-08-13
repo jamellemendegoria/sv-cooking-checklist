@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sv-cooking-checklist/static/css/main.7bf47547.chunk.css",
-    "main.js": "/sv-cooking-checklist/static/js/main.321ebc36.chunk.js",
-    "main.js.map": "/sv-cooking-checklist/static/js/main.321ebc36.chunk.js.map",
+    "main.js": "/sv-cooking-checklist/static/js/main.c93c90d9.chunk.js",
+    "main.js.map": "/sv-cooking-checklist/static/js/main.c93c90d9.chunk.js.map",
     "runtime-main.js": "/sv-cooking-checklist/static/js/runtime-main.619b7ecf.js",
     "runtime-main.js.map": "/sv-cooking-checklist/static/js/runtime-main.619b7ecf.js.map",
     "static/js/2.00c255a0.chunk.js": "/sv-cooking-checklist/static/js/2.00c255a0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.619b7ecf.js",
     "static/js/2.00c255a0.chunk.js",
     "static/css/main.7bf47547.chunk.css",
-    "static/js/main.321ebc36.chunk.js"
+    "static/js/main.c93c90d9.chunk.js"
   ]
 }
